@@ -1,0 +1,89 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  /*box-sizing: border-box;*/
+  /*border: solid 1px red;*/
+}
+body {
+  position: absolute;
+}
+.heart {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin: 35%;
+  transition: all 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+  animation-name: heartmove;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.heart:hover {
+  transform: rotate(1660deg);
+  margin-top: 0px;
+}
+.h1 {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+  background-color: #f88;
+  animation-name: h1color;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.h2 {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  border-radius: 50%;
+  background-color: #f88;
+  animation-name: h1color;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.h3 {
+  height: 49px;
+  width: 49px;
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  transform: rotate(45deg);
+  background-color: #f88;
+  animation-name: h1color;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes h1color {
+  0% {
+    background-color: #aaffee;
+  }
+  25% {
+    background-color: #99ffff;
+  }
+  50% {
+    background-color: #77ddff;
+  }
+  100% {
+    background-color: #ffffff;
+  }
+}
+
+@keyframes heartmove {
+  0% {
+    left: 100px;
+  }
+  25% {
+  }
+  50% {
+    transform: scale(2.25) rotate(-3600deg);
+  }
+  100% {
+    left: 0px;
+  }
+}
